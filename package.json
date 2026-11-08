@@ -1,0 +1,32 @@
+{
+  "name": "basebot",
+  "type": "module",
+  "private": true,
+  "author": "Nazar (Special for Euphoria) <gh/iownswitzerland>",
+  "scripts": {
+    "dev": "bun --watch run src/index.ts",
+    "start": "bun run src/index.ts",
+    "deploy": "bun run scripts/deploy-commands.ts",
+    "typecheck": "bun check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^1.0.0-rc.5"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "dependencies": {
+    "discord.js": "^14.28.1",
+    "dotenv": "^18.0.9",
+    "drizzle-orm": "^1.0.0-rc.5",
+    "ioredis": "^6.0.0",
+    "pg": "^8.23.1",
+    "pino": "^10.4.0",
+    "pino-pretty": "^13.2.0"
+  }
+}
